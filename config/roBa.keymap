@@ -61,14 +61,16 @@
         page_back: page_back {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_ARROW>;
+            bindings = <&kp LEFT_COMMAND>, <&macro_press>, <&kp LEFT_ARROW>;
+
             label = "PAGE_BACK";
         };
 
         page_next: page_next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp RIGHT_ARROW>;
+            bindings = <&kp LEFT_COMMAND>, <&macro_press>, <&kp RIGHT_ARROW>;
+
             label = "PAGE_NEXT";
         };
     };
@@ -109,16 +111,16 @@
 
         NUM {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F9                                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS   &kp ASTERISK
-&kp F5  &kp F6  &kp F7  &kp F8   &kp F10  &trans      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &kp KP_DIVIDE
-&trans  &trans  &trans  &kp F11  &kp F12  &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL  &trans
-&trans  &trans  &trans  &trans   &trans   &trans      &trans           &trans                                                           &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F9                       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
+&kp F5  &kp F6  &kp F7  &kp F8   &kp F10  &trans      &trans  &kp ASTRK        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans  &trans  &trans  &kp F11  &kp F12  &trans      &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL
+&trans  &trans  &trans  &trans   &trans   &trans      &trans  &trans                                                              &trans
             >;
         };
 
         ARROW {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans          &kp END         &kp HOME      &trans           &page_back
+&trans  &trans  &trans  &trans  &trans                      &trans          &kp END         &kp HOME      &kp ESC          &page_back
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &page_next
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans          &kp PAGE_DOWN   &kp PAGE_UP   &trans           &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
