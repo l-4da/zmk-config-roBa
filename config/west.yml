@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/l-4da
-    - name: widget
+    - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
     - name: zmk
@@ -15,7 +15,7 @@ manifest:
       remote: kumamuk-git
       revision: main
     - name: zmk-rgbled-widget
-      remote: widget
+      remote: caksoylar
       revision: mainj
   self:
     path: config
