@@ -111,6 +111,20 @@
 
             label = "PAGE_VIEW";
         };
+
+        page_delete: page_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_COMMAND>,
+                <&macro_tap>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND>;
+
+            label = "PAGE_DELETE";
+        };
     };
 
     behaviors {
@@ -167,10 +181,10 @@
 
         ARROW {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans          &kp END         &kp HOME      &kp ESC          &page_back
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &page_next
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans          &kp PAGE_DOWN   &kp PAGE_UP   &trans           &page_view
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+&trans  &trans  &trans        &trans  &trans                      &trans          &kp END         &kp HOME      &kp ESC          &page_back
+&trans  &trans  &page_delete  &trans  &trans  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &page_next
+&trans  &trans  &trans        &trans  &trans  &trans      &trans  &trans          &kp PAGE_DOWN   &kp PAGE_UP   &trans           &page_view
+&trans  &trans  &trans        &trans  &trans  &trans      &trans  &trans                                                         &trans
             >;
         };
 
