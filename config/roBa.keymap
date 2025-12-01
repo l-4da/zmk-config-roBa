@@ -42,7 +42,7 @@
         };
 
         BT {
-            bindings = <&to 6>;
+            bindings = <&mo 6>;
             key-positions = <0 1>;
         };
 
